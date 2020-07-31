@@ -39,14 +39,16 @@ New Product Page
 
 Customer login page - As a Beaver Wood Carvers returning customer, I would like to be able to sign into the site, so that I don’t have to enter my information each time I want to place an order.
 
-- Task - rename existing user table to Customers
--
+- Task - rename existing user table to Customers - Compete
 
 ### 2. User Story Two
 
 Customer signup page - As a new Beaver Wood Carvers customer, I would like to enter my customer information so that I don’t have to enter my information each time I visit.
 
-- Task - Add additional customer based fields to the signup.ejs file.
+- Task - Add additional customer based fields to the signup.ejs file. - Complete
+- Task - Add additional fields to profile.ejs file.
+- Task - Update profile.ejs to show all customer orders.
+- Task - Remove Delete customer button.
 
 ### 3. User Story Three
 
@@ -91,7 +93,7 @@ Show order history page - As a Beaver Wood Carvers customer, I would like to see
 
 - Task - create ordersshow.ejs
 
-### 10. USer Story Ten
+### 10. User Story Ten
 
 Review specific order - As a Beaver Wood Carvers customer, I would like to be able to select and display a specific order so that I can review the order details and compare what I received against what I ordered.
 

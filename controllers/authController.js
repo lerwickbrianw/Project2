@@ -4,7 +4,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const UserModel = require("../models").User;
+const CustomerModel = require("../models").Customer;
 
 // SIGN OUT ROUTE
 router.get("/logout", (req, res) => {
@@ -14,7 +14,7 @@ router.get("/logout", (req, res) => {
 
 // GET SIGNUP FORM
 router.get("/signup", (req, res) => {
-  res.render("users/signup.ejs");
+  res.render("customers/signup.ejs");
 });
 
 // POST - CREATE NEW USER FROM SIGNUP
@@ -26,12 +26,12 @@ router.post("/signup", (req, res) => {
       if (err) return res.status(500).json(err);
       req.body.password = hashedPwd;
 
-      UserModel.create(req.body)
-        .then((newUser) => {
+      CustomerModel.create(req.body)
+        .then((newCustomer) => {
           const token = jwt.sign(
             {
-              username: newUser.username,
-              id: newUser.id,
+              username: newCustomer.username,
+              id: newCustomer.id,
             },
             process.env.JWT_SECRET,
             {
@@ -40,7 +40,7 @@ router.post("/signup", (req, res) => {
           );
           console.log(token);
           res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
-          res.redirect(`/users/profile/${newUser.id}`);
+          res.redirect(`/customers/profile/${newCustomer.id}`);
         })
         .catch((err) => {
           console.log(err);
@@ -52,36 +52,40 @@ router.post("/signup", (req, res) => {
 
 // GET LOGIN
 router.get("/login", (req, res) => {
-  res.render("users/login.ejs");
+  res.render("customers/login.ejs");
 });
 
 // POST LOGIN
 router.post("/login", (req, res) => {
-  UserModel.findOne({
+  CustomerModel.findOne({
     where: {
       username: req.body.username,
     },
-  }).then((foundUser) => {
-    if (foundUser) {
-      bcrypt.compare(req.body.password, foundUser.password, (err, match) => {
-        if (match) {
-          const token = jwt.sign(
-            {
-              username: foundUser.username,
-              id: foundUser.id,
-            },
-            process.env.JWT_SECRET,
-            {
-              expiresIn: "30 days",
-            }
-          );
-          console.log(token);
-          res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
-          res.redirect(`/users/profile/${foundUser.id}`);
-        } else {
-          return res.sendStatus(400);
+  }).then((foundCustomer) => {
+    if (foundCustomer) {
+      bcrypt.compare(
+        req.body.password,
+        foundCustomer.password,
+        (err, match) => {
+          if (match) {
+            const token = jwt.sign(
+              {
+                username: foundCustomer.username,
+                id: foundCustomer.id,
+              },
+              process.env.JWT_SECRET,
+              {
+                expiresIn: "30 days",
+              }
+            );
+            console.log(token);
+            res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
+            res.redirect(`/customers/profile/${foundCustomer.id}`);
+          } else {
+            return res.sendStatus(400);
+          }
         }
-      });
+      );
     }
   });
 });

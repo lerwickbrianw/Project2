@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customr Profile Page</title>
+  </head>
+
+  <body>
+    <h1>Welcome to <%= customer.name %>'s Profile Page</h1>
+
+    <form
+      action="/customers/profile/<%=customer.id%>?_method=PUT"
+      method="POST"
+    >
+      Name: <input type="text" name="name" value="<%=customer.name%>" /><br />
+      <br />
+      Username:
+      <input type="text" name="username" value="<%=customer.username%>" />
+      <br />
+      <br />
+      Password:
+      <input type="text" name="password" value="<%=customer.password%>" /><br />
+      <br />
+      <input type="submit" value="Edit Profile" />
+    </form>
+    <br />
+    <form action="/customers/<%= customer.id %>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete Customer" />
+    </form>
+
+    <br /><br />
+    <a href="/">Back to Homepage</a>
+  </body>
+</html>
