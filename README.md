@@ -23,10 +23,13 @@ If there is time plan - split out product category to subtable.
 
 Main Page
 ![Beaver Woodcarvers Main Page](/images/Beaver_Wood_Carvers_Main_Page.png)
+
 Products Page
 ![Beaver Wood Carvers Products Page](/images/Beaver_Wood_Carvers_Products_Page.png)
+
 Customer Signup Page
 ![Beaver Wood Carvers Signup Page](/images/Beaver_Wood_Carvers_Signup_Page.png)
+
 New Product Page
 ![Beaver Wood Carvers New Product Page](/images/Beaver_Wood_Carvers_New_Product_Page.png)
 
