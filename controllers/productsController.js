@@ -1,0 +1,64 @@
+const express = require("express");
+const router = express.Router();
+const Product = require("../models").Product;
+
+//index route - get all product
+router.get("/", (req, res) => {
+  Product.findAll().then((products) => {
+    res.render("products/index.ejs", {
+      products: products,
+    });
+  });
+});
+
+// NEW ROUTE - SEND EMPTY FORM
+router.get("/new", (req, res) => {
+  res.render("new.ejs");
+  console.log(product);
+});
+
+//Post route - takes data from the form and creates new product
+router.post("/", (req, res) => {
+  Product.create(req.body).then((newProduct) => {
+    res.redirect("/product");
+  });
+});
+
+//show route - get one product
+router.get("/:id", (req, res) => {
+  Product.findByPk(req.params.id).then((product) => {
+    res.render("products/show.ejs", {
+      product: product,
+    });
+  });
+});
+
+//Put route to update changes
+router.put("/:id", (req, res) => {
+  Product.update(req.body, {
+    where: { id: req.params.id },
+    returning: true,
+  }).then((product) => {
+    res.redirect("/product");
+  });
+});
+
+// get route for editing product
+router.get("/:id/edit", function (req, res) {
+  Product.findByPk(req.params.id).then((product) => {
+    Team.findAll().then((allTeams) => {
+      res.render("edit.ejs", {
+        product: product,
+        teams: allTeams,
+      });
+    });
+  });
+});
+
+//delete a product
+router.delete("/:id", (req, res) => {
+  Product.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/product");
+  });
+});
+module.exports = router;

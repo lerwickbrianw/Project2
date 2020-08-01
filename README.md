@@ -46,17 +46,19 @@ Customer login page - As a Beaver Wood Carvers returning customer, I would like 
 Customer signup page - As a new Beaver Wood Carvers customer, I would like to enter my customer information so that I don’t have to enter my information each time I visit.
 
 - Task - Add additional customer based fields to the signup.ejs file. - Complete
-- Task - Add additional fields to profile.ejs file.
-- Task - Update profile.ejs to show all customer orders.
-- Task - Remove Delete customer button.
+- Task - Add additional fields to profile.ejs file. - Complete
+- Task - Update profile.ejs to show all customer orders.(need orders table created first)
+- Task - Remove Delete customer button. - Complete
+- Task - catch error for duplicate username. - catch complete but not able to add error message to signup page.
 
 ### 3. User Story Three
 
 Product show page – As a Beaver Wood Carvers store owner, I want to showcase all products available to customers when they visit the site so that they know what is available to be ordered.
 
-- Task - revise current index.ejs to become the site home page
-- Task - create products table
-- Task - create product category table
+- Task - create index.ejs to show all products
+- Task - create show.ejs to show individual product
+- Task - create products table - Complete
+- Task - create product category table - hold for later if there is time.
 
 ### 4. User Story Four
 
@@ -70,8 +72,8 @@ Order show page -As a Beaver Wood Carvers customer, I would like to be able to s
 
 Add new products - As a Beaver Wood Carvers store owner, I want to be able to add new products when they become available to show on the product show page so that the customers can see what products are available for order.
 
-- Task - create newproduct.ejs
-- Task - create productsController.js
+- Task - create new.ejs page to add new products.
+- Task - create productsController.js - Complete
 
 ### 6. User Story Six
 
@@ -115,13 +117,17 @@ Views
   - Index.ejs show all products by category
   - Edit.ejs show product details for editing
   - New.ejs blank form to add new product
-    Models
+
+Models
+
 - Products.js defines product table fields
 - Customers.js defines customer table fields
 - Productcategory.js defines productcategory table fields
 - Orders.js defines orders table fields
 - Index.js needed by sequelize
-  Controllers
+
+Controllers
+
 - authController controls login and signup functions
 - customersController controls customer detail display, and edit
 - productsController controls product detail display, add and edit

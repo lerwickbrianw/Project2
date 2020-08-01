@@ -44,7 +44,8 @@ router.post("/signup", (req, res) => {
         })
         .catch((err) => {
           console.log(err);
-          res.send(`err ${err}`);
+          // res.send(`err ${err} duplicate username`);
+          res.redirect("/auth/signup/");
         });
     });
   });
