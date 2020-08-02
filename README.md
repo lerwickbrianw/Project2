@@ -55,8 +55,8 @@ Customer signup page - As a new Beaver Wood Carvers customer, I would like to en
 
 Product show page – As a Beaver Wood Carvers store owner, I want to showcase all products available to customers when they visit the site so that they know what is available to be ordered.
 
-- Task - create index.ejs to show all products
-- Task - create show.ejs to show individual product
+- Task - create index.ejs to show all products - need to understand how to handle images - where to store them.
+- Task - create show.ejs to show individual product - Complete
 - Task - create products table - Complete
 - Task - create product category table - hold for later if there is time.
 
@@ -72,7 +72,8 @@ Order show page -As a Beaver Wood Carvers customer, I would like to be able to s
 
 Add new products - As a Beaver Wood Carvers store owner, I want to be able to add new products when they become available to show on the product show page so that the customers can see what products are available for order.
 
-- Task - create new.ejs page to add new products.
+- Task - create new.ejs page to add new products. - Complete
+- Task - update get and post routes to create new product. - Complete
 - Task - create productsController.js - Complete
 
 ### 6. User Story Six

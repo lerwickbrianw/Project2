@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Beaver Wood Carvers - Add New Product</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+
+  <body>
+    <h1>Beaver Wood Carvers - Add New Product page</h1>
+    <!--  NOTE: action will be the route, method will be the HTTP verb-->
+    <form action="/products" method="POST">
+      Product Name: <input type="text" name="productName" /><br />
+      Product Description: <input type="text" name="productDescription" /><br />
+      Product Category: <input type="text" name="productCategory" /><br />
+      img: <input type="text" name="img" /><br />
+
+      <input type="submit" name="" value="Create Product" />
+    </form>
+  </body>
+</html>

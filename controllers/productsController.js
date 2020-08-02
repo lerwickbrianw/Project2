@@ -13,14 +13,15 @@ router.get("/", (req, res) => {
 
 // NEW ROUTE - SEND EMPTY FORM
 router.get("/new", (req, res) => {
-  res.render("new.ejs");
-  console.log(product);
+  res.render("products/new.ejs");
+  //   console.log(product);
 });
 
 //Post route - takes data from the form and creates new product
 router.post("/", (req, res) => {
   Product.create(req.body).then((newProduct) => {
-    res.redirect("/product");
+    // res.redirect("product/index.ejs");
+    res.redirect(`/products/${newProduct.id}`);
   });
 });
 

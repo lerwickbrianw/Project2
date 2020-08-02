@@ -1,0 +1,28 @@
+body {
+  background-color: whitesmoke;
+  font-family: Trebuchet, Arial, sans-serif;
+  display: flexgrid;
+}
+
+h1 {
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+li {
+  margin: 20px;
+}
+
+.edit {
+  font-size: 15px;
+}
+.signup {
+  padding: 10px;
+}
+.login {
+  padding: 10px;
+}
+img {
+  height: 150px;
+  width: 150px;
+}
