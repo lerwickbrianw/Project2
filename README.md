@@ -111,7 +111,7 @@ Review specific order - As a Beaver Wood Carvers customer, I would like to be ab
 
 Edit existing product - As a Beaver Wood Carvers store owner, I would like to be able to edit an existing product after it has been created to update the information about the product.
 
-- Task - update productsController for edit get and put routes. - get route works but can't put
+- Task - update productsController for edit get and put routes. - Complete
 - Task - create products/edit.ejs - Complete
 
 ## MVP File Structure

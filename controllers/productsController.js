@@ -40,7 +40,7 @@ router.put("/:id", (req, res) => {
     where: { id: req.params.id },
     returning: true,
   }).then((product) => {
-    res.redirect("products/index.ejs");
+    res.redirect("/products");
   });
 });
 

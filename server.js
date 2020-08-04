@@ -15,7 +15,7 @@ const verifyToken = (req, res, next) => {
     if (err || !decodedUser) {
       return res.status(401).json({ error: "Unauthorized Request" });
     }
-    req.user = decodedUser;
+    req.customer = decodedUser;
     // ADDS A .user PROP TO REQ FOR TOKEN USER
     console.log(decodedUser);
 
