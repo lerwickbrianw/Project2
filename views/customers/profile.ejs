@@ -44,6 +44,22 @@
     </form>
     <br />
     <br /><br />
+    <br /><br />
+    <a href="/orders">My Orders</a>
+    <% if(customer.Order){%>
+    <h3>Orders placed by you:</h3>
+    <% for (let i = 0; i < customers.Orders.length; i++){ %>
+    <li>
+      <a href="/orders/<%=customer.Orders[i].id%>"
+        ><%=customers.Orders[i].name%></a
+      >
+    </li>
+    <br />
+    <% } %> <% } else {%>
+    <h3>No orders placed yet</h3>
+
+    <br />
+    <%}%> <br /><br />
     <a href="/">Back to Homepage</a>
   </body>
 </html>

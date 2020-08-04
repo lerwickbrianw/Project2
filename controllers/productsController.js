@@ -40,18 +40,15 @@ router.put("/:id", (req, res) => {
     where: { id: req.params.id },
     returning: true,
   }).then((product) => {
-    res.redirect("/product");
+    res.redirect("products/index.ejs");
   });
 });
 
 // get route for editing product
 router.get("/:id/edit", function (req, res) {
   Product.findByPk(req.params.id).then((product) => {
-    Team.findAll().then((allTeams) => {
-      res.render("edit.ejs", {
-        product: product,
-        teams: allTeams,
-      });
+    res.render("products/edit.ejs", {
+      product: product,
     });
   });
 });

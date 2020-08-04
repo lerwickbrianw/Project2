@@ -55,18 +55,20 @@ Customer signup page - As a new Beaver Wood Carvers customer, I would like to en
 
 Product show page – As a Beaver Wood Carvers store owner, I want to showcase all products available to customers when they visit the site so that they know what is available to be ordered.
 
-- Task - create index.ejs to show all products - need to understand how to handle images - where to store them.
+- Task - create index.ejs to show all products - Complete
 - Task - create show.ejs to show individual product - Complete
 - Task - create products table - Complete
 - Task - create product category table - hold for later if there is time.
+- Task - show Edit and Delete options only if store owner is signed in
+- Task - add order button to create orders table entry
 
 ### 4. User Story Four
 
-Order show page -As a Beaver Wood Carvers customer, I would like to be able to see all items I have added to my order so that I can be sure that I am ordering exactly what I want.
+Order show page -As a Beaver Wood Carvers customer, I would like to be able to see the item I have added to my order so that I can be sure that I am ordering exactly what I want.
 
-- Task - create orders table
-- Create ordersController.js
-- create orders.ejs
+- Task - create orders table - Complete
+- Task - Create ordersController.js
+- Task - create orders show.ejs
 
 ### 5. User Story Five
 
@@ -80,11 +82,14 @@ Add new products - As a Beaver Wood Carvers store owner, I want to be able to ad
 
 Add to order button – As a Beaver Wood Carvers store owner, I want to provide the customer with a button to add the product to the order so that they can add items to their order.
 
+- Task - add order button to products.ejs
+- Task - update routes to insert into orders table
+
 ### 7. User Story Seven
 
 Edit order page - As a Beaver Wood Carvers customer, I would like to be able to update or delete items on my order so that I can change my mind or make corrections before finalizing the order.
 
-- Task - create orderedit.ejs
+- Task - create order/edit.ejs
 
 ### 8. User Story Eight
 
@@ -94,13 +99,20 @@ Submit order - As a Beaver Wood Carvers customer, I would like to be able to sub
 
 Show order history page - As a Beaver Wood Carvers customer, I would like to see all orders that I have placed in the past so that I can easily view my order history.
 
-- Task - create ordersshow.ejs
+- Task - display all customer orders on customer profile page with link to open each individual order.
 
 ### 10. User Story Ten
 
 Review specific order - As a Beaver Wood Carvers customer, I would like to be able to select and display a specific order so that I can review the order details and compare what I received against what I ordered.
 
-- Task -
+- Task - create orders/show.ejs
+
+### 11. User Story Elevin
+
+Edit existing product - As a Beaver Wood Carvers store owner, I would like to be able to edit an existing product after it has been created to update the information about the product.
+
+- Task - update productsController for edit get and put routes. - get route works but can't put
+- Task - create products/edit.ejs - Complete
 
 ## MVP File Structure
 
