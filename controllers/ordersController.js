@@ -33,8 +33,7 @@ router.get("/:id", (req, res) => {
     ],
   }).then((order) => {
     Product.findAll().then((product) => {
-      //   console.log("players", playerProfile);
-      //   console.log("allTeams", allTeams);
+      //   res.send(order);
       res.render("orders/show.ejs", {
         order: order,
         product: product,
