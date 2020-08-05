@@ -10,9 +10,11 @@ module.exports = {
       },
       customerId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
       },
       productId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
       },
       customized: {
         type: Sequelize.BOOLEAN,
@@ -22,6 +24,8 @@ module.exports = {
       },
       orderStatus: {
         type: Sequelize.STRING,
+        allowNull: false,
+        defaultValue: "New",
       },
       createdAt: {
         allowNull: false,

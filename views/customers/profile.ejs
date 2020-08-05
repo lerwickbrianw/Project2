@@ -45,21 +45,22 @@
     <br />
     <br /><br />
     <br /><br />
-    <a href="/orders">My Orders</a>
-    <% if(customer.Order){%>
-    <h3>Orders placed by you:</h3>
-    <% for (let i = 0; i < customers.Orders.length; i++){ %>
-    <li>
-      <a href="/orders/<%=customer.Orders[i].id%>"
-        ><%=customers.Orders[i].name%></a
-      >
-    </li>
+    <h2>My Orders</h2>
+    <% if(customer.Products){%> <% for (let i = 0; i < customer.Products.length;
+    i++){ %>
+    <a href="/orders/<%=customer.Products[i].id%>">
+      <%=customer.Products[i].productName%></a
+    
+    <%=customer.Products[i].productDescription%>
+
     <br />
     <% } %> <% } else {%>
     <h3>No orders placed yet</h3>
 
     <br />
-    <%}%> <br /><br />
+    <% } %>
+    <br />
+    <br /><br />
     <a href="/">Back to Homepage</a>
   </body>
 </html>

@@ -7,9 +7,13 @@ const cookieParser = require("cookie-parser");
 
 const verifyToken = (req, res, next) => {
   let token = req.cookies.jwt;
+  // let token = req.headers.cookie.split("").splice(4).join("");
   // COOKIE PARSER GIVES YOU A .cookies PROP, WE NAMED OUR TOKEN jwt
 
-  console.log("Cookies: ", req.cookies.jwt);
+  // console.log(req.headers.cookie.split("").splice(4).join(""));
+  // COOKIE PARSER GIVES YOU A .cookies PROP, WE NAMED OUR TOKEN jwt
+
+  console.log("Cokies: ", req.cookies.jwt);
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
     if (err || !decodedUser) {
@@ -17,7 +21,7 @@ const verifyToken = (req, res, next) => {
     }
     req.customer = decodedUser;
     // ADDS A .user PROP TO REQ FOR TOKEN USER
-    console.log(decodedUser);
+    console.log("token", decodedUser);
 
     next();
   });
@@ -26,6 +30,7 @@ const verifyToken = (req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
+app.use(cookieParser());
 
 // HOMEPAGE
 app.get("/", (req, res) => {
@@ -33,9 +38,17 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", require("./controllers/authController.js"));
-app.use("/customers", require("./controllers/customersController.js"));
-app.use("/products", require("./controllers/productsController.js"));
-app.use("/orders", require("./controllers/ordersController.js"));
+app.use(
+  "/customers",
+  verifyToken,
+  require("./controllers/customersController.js")
+);
+app.use(
+  "/products",
+  verifyToken,
+  require("./controllers/productsController.js")
+);
+app.use("/orders", verifyToken, require("./controllers/ordersController.js"));
 
 app.listen(process.env.PORT, () => {
   console.log("Nodemon listening");

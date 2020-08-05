@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BWC - New Order</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+
+  <body>
+    <h1>Beaver Wood Carvers - Create New Order</h1>
+    <!--  NOTE: action will be the route, method will be the HTTP verb-->
+    <form action="/orders" method="POST">
+    Product Id:
+    <input type="text" name="productId" value="<%=product.id%>" /><br />
+    Product Name:
+      <input
+        type="text"
+        name="productName"
+        value="<%=product.productName%>"
+      /><br />
+      Product Description:
+      <input
+        type="text"
+        name="productDescription"
+        value="<%=product.productDescription%>"
+      /><br />
+      Product Category:
+      <input
+        type="text"
+        name="productCategory"
+        value="<%=product.productCategory%>"
+      /><br />
+      img: <input type="text" name="img" value="<%=product.img%>" /><br />
+      Customized:
+      <input
+        type="checkbox"
+        name="customized"
+      /><br />
+      Custom Message: <input type="text" name="customMessage" />
+      <br />
+<input type='hidden' name='customerId' value ="<%=req.user.id%>">
+      <br></br>
+      <input type="submit" name="" value="Submit Order" />
+    </form>
+  </body>
+</html>

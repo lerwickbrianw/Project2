@@ -47,9 +47,10 @@ Customer signup page - As a new Beaver Wood Carvers customer, I would like to en
 
 - Task - Add additional customer based fields to the signup.ejs file. - Complete
 - Task - Add additional fields to profile.ejs file. - Complete
-- Task - Update profile.ejs to show all customer orders.(need orders table created first)
+- Task - Update profile.ejs to show all customer orders. - Complete
 - Task - Remove Delete customer button. - Complete
 - Task - catch error for duplicate username. - catch complete but not able to add error message to signup page.
+- Task - refactor profile.ejs to include a query to get all order data to display
 
 ### 3. User Story Three
 
@@ -60,15 +61,17 @@ Product show page – As a Beaver Wood Carvers store owner, I want to showcase a
 - Task - create products table - Complete
 - Task - create product category table - hold for later if there is time.
 - Task - show Edit and Delete options only if store owner is signed in
-- Task - add order button to create orders table entry
+- Task - add order button to create orders table entry - Complete
+- Task - add route to ordersController to create new order. - Complete
 
 ### 4. User Story Four
 
 Order show page -As a Beaver Wood Carvers customer, I would like to be able to see the item I have added to my order so that I can be sure that I am ordering exactly what I want.
 
 - Task - create orders table - Complete
-- Task - Create ordersController.js
-- Task - create orders show.ejs
+- Task - Create ordersController.js - In process
+- Task - create orders show.ejs - in process
+- Task - On create order page, open Custom Message field if Customized box is checked - add script link to separate .js file
 
 ### 5. User Story Five
 
@@ -82,8 +85,8 @@ Add new products - As a Beaver Wood Carvers store owner, I want to be able to ad
 
 Add to order button – As a Beaver Wood Carvers store owner, I want to provide the customer with a button to add the product to the order so that they can add items to their order.
 
-- Task - add order button to products.ejs
-- Task - update routes to insert into orders table
+- Task - add order button to products.ejs - Complete
+- Task - update routes to insert into orders table - In Process
 
 ### 7. User Story Seven
 

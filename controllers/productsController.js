@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Product = require("../models").Product;
+const Customer = require("../models").Customer;
 
 //index route - get all product
 router.get("/", (req, res) => {

@@ -10,7 +10,6 @@ module.exports = {
         productId: 1,
         customized: true,
         customMessage: "Graper Farms",
-        orderStatus: "New",
       },
     ]);
   },
