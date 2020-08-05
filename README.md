@@ -60,7 +60,7 @@ Product show page – As a Beaver Wood Carvers store owner, I want to showcase a
 - Task - create show.ejs to show individual product - Complete
 - Task - create products table - Complete
 - Task - create product category table - hold for later if there is time.
-- Task - show Edit and Delete options only if store owner is signed in
+- Task - show Edit and Delete options only if store owner is signed in - Complete
 - Task - add order button to create orders table entry - Complete
 - Task - add route to ordersController to create new order. - Complete
 
@@ -69,8 +69,8 @@ Product show page – As a Beaver Wood Carvers store owner, I want to showcase a
 Order show page -As a Beaver Wood Carvers customer, I would like to be able to see the item I have added to my order so that I can be sure that I am ordering exactly what I want.
 
 - Task - create orders table - Complete
-- Task - Create ordersController.js - In process
-- Task - create orders show.ejs - in process
+- Task - Create ordersController.js - Complete
+- Task - create orders show.ejs - Complete
 - Task - On create order page, open Custom Message field if Customized box is checked - add script link to separate .js file
 
 ### 5. User Story Five

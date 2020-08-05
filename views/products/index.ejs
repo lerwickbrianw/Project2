@@ -26,12 +26,15 @@
       <img src="<%=product.img%>" alt="" />
     </li>
 
-      <!-- Add edit link here  -->
+<%if (userId ===1) {%>
       <a class="edit" href="/products/<%=product.id; %>/edit">Edit</a>
     <form action="/products/<%=product.id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" />
     </form>
-      <% }) %>
+      <% } %>
+    <% }) %>
     </ul>
+
+
   </body>
 </html>

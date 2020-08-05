@@ -26,11 +26,10 @@ const verifyToken = (req, res, next) => {
     next();
   });
 };
-
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
-app.use(cookieParser());
 
 // HOMEPAGE
 app.get("/", (req, res) => {

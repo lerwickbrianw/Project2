@@ -47,36 +47,15 @@ router.get("/new/:id/", function (req, res) {
   Product.findByPk(req.params.id).then((product) => {
     res.render("orders/new.ejs", {
       product: product,
+      userId: req.customer.id,
     });
   });
 });
 
-// router.get("/new/:id/", (req, res)  => {
-//     Product.findByPk(req.params.id, {
-//         include: [
-//             {
-//                 model: Teams,
-//                 attributes: ["id", "name"],
-//             },
-//             { model: Pokemons },
-//         ],
-//     }).then((playerProfile) => {
-//         Teams.findAll().then((allTeams) => {
-//             console.log("players", playerProfile);
-//             console.log("allTeams", allTeams);
-//             res.render("players/profile.ejs", {
-//                 players: playerProfile,
-//                 teams: allTeams,
-//             });
-//         });
-//     });
-// });
-
 //Post route - takes data from the form and creates new order
 router.post("/", (req, res) => {
   Order.create(req.body).then((newOrder) => {
-    // res.redirect("product/index.ejs");
-    res.redirect(`orders/show/${newOrder.id}`);
+    res.redirect(`orders/${newOrder.id}`);
   });
 });
 module.exports = router;
