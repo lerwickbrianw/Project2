@@ -2,32 +2,52 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title></title>
-    <link rel="stylesheet" href="/app.css" />
+    <title>Beaver Wood Carvers</title>
+        <base href="/" />
+    <link rel="stylesheet" href="assets/css/subpages.css" />
   </head>
+<body>
+  <div class="page-wrap">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/" ><span class="icon fa-home" title="Home"></span></a>
+        </li>
+        <li>
+          <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
+        </li>
+        <li>
+          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
+        </li>
+        <li>
+          <a href="/auth/signup" class="active"><span class="icon fa-user-plus" title="Sign Up"></span></a>
+        </li>
+      </ul>
+    </nav>
 
-  <body>
+    <!-- Main -->
+    <section id="main">
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h1>Welcome to Beaver Wood Carvers</h1>
+          <p>
+            Specializing in custom designed signs
+          </p>
+        </div>
+      </section>
     <h1>Sign Up</h1>
-
     <form action="/auth/signup" method="POST">
-      Name: <input type="text" name="name" /><br />
-      <br />
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="text" name="password" /><br />
-      <br />
-      Address: <input type="text" name="address" /><br />
-      <br />
-      City: <input type="text" name="city" /><br />
-      <br />
-      State: <input type="text" name="state" /><br />
-      <br />
-      Zip Code <input type="text" name="zipCode" /><br />
-      <br />
-      Phone: <input type="text" name="phone" /><br />
-      <br />
-      Email: <input type="text" name="email" /><br />
-      <br />
+      Name: <input type="text" name="name" />
+      Username: <input type="text" name="username" /> 
+      Password: <input type="text" name="password" />
+      Address: <input type="text" name="address" />
+      City: <input type="text" name="city" />
+      State: <input type="text" name="state" />
+      Zip Code <input type="text" name="zipCode" />
+      Phone: <input type="text" name="phone" />
+      Email: <input type="text" name="email" />
       <input type="submit" value="SignUp" />
     </form>
   </body>

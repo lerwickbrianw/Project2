@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/app.css" />
-    <title>Customer Profile Page</title>
-  </head>
+<html>
 
-  <body>
-    <h1>Welcome to <%= customer.name %>'s Profile Page</h1>
+<head>
+  <title>Beaver Wood Carvers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <link rel="stylesheet" href="assets/css/subpages.css" />
+</head>
+
+<body>
+  <div class="page-wrap">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/" class="active"><span class="icon fa-home" title="Home"></span></a>
+        </li>
+        <li>
+          <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
+        </li>
+        <li>
+          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
+        </li>
+        <li>
+          <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main">
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+    <h1>Welcome <%= customer.name %>!</h1>
+          <p>
+            Account information and order history
+          </p>
+        </div>
+      </section>
+
 
     <form
       action="/customers/profile/<%=customer.id%>?_method=PUT"
       method="POST"
     >
-      Name: <input type="text" name="name" value="<%=customer.name%>" /><br />
-      <br />
+      Name: <input type="text" name="name" value="<%=customer.name%>" />
       Username:
       <input type="text" name="username" value="<%=customer.username%>" />
-
-      <br />
-      <br />
       Address:
-      <input type="text" name="address" value="<%=customer.address%>" /><br />
-      <br />
+      <input type="text" name="address" value="<%=customer.address%>" />
       City:
-      <input type="text" name="city" value="<%=customer.city%>" /><br />
-      <br />
+      <input type="text" name="city" value="<%=customer.city%>" />
       State:
-      <input type="text" name="state" value="<%=customer.state%>" /><br />
-      <br />
+      <input type="text" name="state" value="<%=customer.state%>" />
       Zip Code:
-      <input type="text" name="zipCode" value="<%=customer.zipCode%>" /><br />
-      <br />
+      <input type="text" name="zipCode" value="<%=customer.zipCode%>" />
       Phone:
-      <input type="text" name="phone" value="<%=customer.phone%>" /><br />
-      <br />
+      <input type="text" name="phone" value="<%=customer.phone%>" />
       Email:
-      <input type="text" name="email" value="<%=customer.email%>" /><br />
-      <br />
+      <input type="text" name="email" value="<%=customer.email%>" />
     </form>
-    <br />
-    <br /><br />
-    <br /><br />
-    <h2>My Orders</h2>
+        <h2>My Orders</h2>
     <% if(customer.Products){%> <% for (let i = 0; i < customer.Products.length;
     i++){ %>
     <li>
@@ -60,7 +79,8 @@
     <br />
     <% } %>
     <br />
-    <br /><br />
+    
     <a href="/">Back to Homepage</a>
+    <br /><br />
   </body>
 </html>
