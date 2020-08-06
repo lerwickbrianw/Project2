@@ -1,21 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beaver Wood Carvers Product</title>
-    <link rel="stylesheet" href="/app.css" />
-  </head>
+<html>
 
-  <body>
-    <h1><%=product.productName%></h1>
-    <img src="<%=product.img%>" />
-    <h2><%=product.productDescription%></h2>
-    <h3><%=product.productCategory%></h3>
-    <form method="get" action="/orders/new/<%=product.id;%>">
-      <input type="submit" value="Order" />
-    </br>
-    <a href="/products">Back to Products</a>
-    </form>
-  </body>
+<head>
+  <title>Beaver Wood Carvers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+</head>
+
+<body>
+  <div class="page-wrap">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/" class="active"><span class="icon fa-home" title="Home"></span></a>
+        </li>
+        <li>
+          <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
+        </li>
+        <li>
+          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
+        </li>
+        <li>
+          <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main">
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h1>Welcome to Beaver Wood Carvers</h1>
+          <p>
+            Specializing in custom designed signs
+          </p>
+        </div>
+      </section>
+      <div id="main">
+        <div class="inner">
+          <!-- Boxes -->
+            <div class="box">
+              <a class="image fit"><img src="<%=product.img%>" alt="" /></a>
+              <div class="inner">
+                <h3><%=product.productName%></h3>
+                <p>
+                  <%=product.productDescription%>
+                </p>
+
+                <form method="get" action="/orders/new/<%=product.id;%>">
+                  <input type="submit" value="Order" />
+                  </br>
+                  <a href="/products">Back to Products</a>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
+

@@ -54,6 +54,10 @@ router.get("/new/:id/", function (req, res) {
 //Post route - takes data from the form and creates new order
 router.post("/", (req, res) => {
   Order.create(req.body).then((newOrder) => {
+    if (req.body.customMessage === null) {
+      console;
+      req.body.customized = false;
+    }
     res.redirect(`orders/${newOrder.id}`);
   });
 });
