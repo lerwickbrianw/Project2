@@ -33,6 +33,18 @@
               ><span class="icon fa-user-plus" title="Sign Up"></span
             ></a>
           </li>
+          <li>
+            <a href="/customers/profile/<%=userId%>"
+              ><span class="icon fa-user" title="My Account"></span
+            ></a>
+          </li>
+          <li>
+            <%if (userId !==1) {%> <%} else { %>
+            <a href="/products/new"
+              ><span class="icon fa-plus-square" title="Add New Product"></span
+            ></a>
+            <% } %>
+          </li>
         </ul>
       </nav>
 
@@ -41,9 +53,9 @@
         <!-- Banner -->
         <section id="banner">
           <div class="inner">
-            <h1>Welcome to Beaver Wood Carvers</h1>
+            <h1>Beaver Wood Carvers Products</h1>
             <p>
-              Specializing in custom designed signs
+              Select a product you like and customize to fit your needs!
             </p>
           </div>
         </section>
@@ -67,6 +79,17 @@
                     data-poptrox="youtube,800x400"
                     >Details</a
                   >
+                  <%if (userId !==1) {%> <%} else { %>
+                  <form action="/products/edit/<%=product.id%>">
+                    <input type="submit" value="Edit" />
+                  </form>
+                  <form
+                    action="/products/<%=product.id%>?_method=DELETE"
+                    method="POST"
+                  >
+                    <input type="submit" value="Delete" />
+                  </form>
+                  <% } %>
                 </div>
               </div>
               <% }) %>

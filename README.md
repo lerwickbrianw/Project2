@@ -86,7 +86,7 @@ Add new products - As a Beaver Wood Carvers store owner, I want to be able to ad
 Add to order button – As a Beaver Wood Carvers store owner, I want to provide the customer with a button to add the product to the order so that they can add items to their order.
 
 - Task - add order button to products.ejs - Complete
-- Task - update routes to insert into orders table - In Process
+- Task - update routes to insert into orders table - Complete
 
 ### 7. User Story Seven
 

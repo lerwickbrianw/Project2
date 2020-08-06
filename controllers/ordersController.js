@@ -33,7 +33,7 @@ router.get("/:id", (req, res) => {
     ],
   }).then((order) => {
     Product.findAll().then((product) => {
-      //   res.send(order);
+      // res.send(order);
       res.render("orders/show.ejs", {
         order: order,
         product: product,
@@ -41,6 +41,7 @@ router.get("/:id", (req, res) => {
     });
   });
 });
+
 // get route for editing product
 router.get("/new/:id/", function (req, res) {
   Product.findByPk(req.params.id).then((product) => {
@@ -54,11 +55,22 @@ router.get("/new/:id/", function (req, res) {
 //Post route - takes data from the form and creates new order
 router.post("/", (req, res) => {
   Order.create(req.body).then((newOrder) => {
-    if (req.body.customMessage === null) {
-      console;
-      req.body.customized = false;
-    }
+    // if (req.body.customMessage === null) {
+    //   req.body.customized = false;
+    //   console.log("customMessage", req.body.customMessage);
+    //   console.log("customized", req.body.customized);
+    // } else {
+    //   console.log("customMessage", req.body.customMessage);
+    //   console.log("customized", req.body.customized);
+    // }
     res.redirect(`orders/${newOrder.id}`);
+  });
+});
+
+//delete a product
+router.delete("/:id", (req, res) => {
+  Order.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/products");
   });
 });
 module.exports = router;

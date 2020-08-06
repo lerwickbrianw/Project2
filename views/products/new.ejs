@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Beaver Wood Carvers - Add New Product</title>
-    <link rel="stylesheet" href="/app.css" />
-  </head>
 
-  <body>
-    <h1>Beaver Wood Carvers - Add New Product page</h1>
-    <!--  NOTE: action will be the route, method will be the HTTP verb-->
+<head>
+  <title>Beaver Wood Carvers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/" />
+  <link rel="stylesheet" href="assets/css/subpages.css" />
+</head>
+
+<body>
+  <div class="page-wrap">
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="/"><span class="icon fa-home" title="Home"></span></a>
+        </li>
+        <li>
+          <a href="/auth/login" ><span class="icon fa-sign-in" title="Log In"></span></a>
+        </li>
+        <li>
+          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
+        </li>
+        <li>
+          <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
+        </li>
+                  <li>
+                    <%if (userId !==1) {%> <%} else { %>
+                    <a href="/products/new" class='active'><span class="icon fa-plus-square" title="Add New Product"></span></a>
+                    <% } %>
+                  </li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main">
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h1>Beaver Wood Carvers New Products</h1>
+          <p>
+            Add exciting new products here!
+          </p>
+        </div>
+      </section>
     <form action="/products" method="POST">
       Product Name: <input type="text" name="productName" /><br />
       Product Description: <input type="text" name="productDescription" /><br />
       Product Category: <input type="text" name="productCategory" /><br />
-      img: <input type="text" name="img" /><br />
+      Product Image: <input type="text" name="img" /><br />
 
       <input type="submit" name="" value="Create Product" />
     </form>
+        <form action="/products/">
+          <input type="submit" value="Return to Products Page" />
+        </form>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
   </body>
 </html>

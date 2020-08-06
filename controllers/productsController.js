@@ -15,8 +15,10 @@ router.get("/", (req, res) => {
 
 // NEW ROUTE - SEND EMPTY FORM
 router.get("/new", (req, res) => {
-  res.render("products/new.ejs");
-  //   console.log(product);
+  res.render("products/new.ejs", {
+    //   console.log(product);
+    userId: req.customer.id,
+  });
 });
 
 //Post route - takes data from the form and creates new product
@@ -47,7 +49,7 @@ router.put("/:id", (req, res) => {
 });
 
 // get route for editing product
-router.get("/:id/edit", function (req, res) {
+router.get("/edit/:id/", function (req, res) {
   Product.findByPk(req.params.id).then((product) => {
     res.render("products/edit.ejs", {
       product: product,

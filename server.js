@@ -17,9 +17,12 @@ const verifyToken = (req, res, next) => {
 
   jwt.verify(token, process.env.JWT_SECRET, (err, decodedUser) => {
     if (err || !decodedUser) {
-      return res.status(401).json({ error: "Unauthorized Request" });
+      // return res.status(401).json({ error: "Unauthorized Request" });
+      req.customer = 0;
+    } else {
+      req.customer = decodedUser;
     }
-    req.customer = decodedUser;
+
     // ADDS A .user PROP TO REQ FOR TOKEN USER
     console.log("token", decodedUser);
 
@@ -33,7 +36,7 @@ app.use(express.static("public"));
 
 // HOMEPAGE
 app.get("/", (req, res) => {
-  res.render("customers/index.ejs");
+  res.redirect("/customers");
 });
 
 app.use("/auth", require("./controllers/authController.js"));

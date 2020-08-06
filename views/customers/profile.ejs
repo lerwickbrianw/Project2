@@ -26,6 +26,11 @@
         <li>
           <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
         </li>
+                  <li>
+                    <%if (userId !==1) {%> <%} else { %>
+                    <a href="/products/new"><span class="icon fa-plus-square" title="Add New Product"></span></a>
+                    <% } %>
+                  </li>
       </ul>
     </nav>
 
@@ -68,7 +73,7 @@
     <li>
       <a href="/orders/<%=customer.Products[i].id%>">
         <%=customer.Products[i].productName%></a
-      >
+
       <br />
       <%=customer.Products[i].productDescription%>
     </li>
@@ -76,11 +81,22 @@
     <% } %> <% } else {%>
     <h3>No orders placed yet</h3>
 
-    <br />
+  
     <% } %>
-    <br />
+
     
-    <a href="/">Back to Homepage</a>
-    <br /><br />
+    <form action="/">
+    <input type="submit" value="Return to Home Page" />
+    </form>
+    <form action="/products/">
+    <input type="submit" value="Return to Products Page" />
+    </form>
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.poptrox.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
   </body>
 </html>

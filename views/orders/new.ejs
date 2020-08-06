@@ -34,9 +34,9 @@
       <!-- Banner -->
       <section id="banner">
         <div class="inner">
-          <h1>Welcome to Beaver Wood Carvers</h1>
+          <h1>Beaver Wood Carvers New Order</h1>
           <p>
-            Specializing in custom designed signs
+            Customize and order your product here
           </p>
         </div>
       </section>
@@ -52,8 +52,8 @@
                     <%=product.productDescription%>
                   </p>
                       <form action="/orders" method="POST">
-                        Customized:
-                        <input type="checkbox" name="customized" /><br />
+                        <!-- Customized:
+                        <input type="checkbox" name="customized" /><br /> -->
                         Custom Message: <input type="text" placeholder="Enter customization instructions" name="customMessage" />
                         <input type='hidden' name='customerId' value="<%=userId%>">
                         <input type="hidden" name="productId" value="<%=product.id%>" />
@@ -66,40 +66,6 @@
         </section>
 
 
-
-
-    <!-- <form action="/orders" method="POST">
-        <input type="hidden" name="productId" value="<%=product.id%>" />
-    Product Name:
-      <input
-        type="text"
-        name="productName"
-        value="<%=product.productName%>"
-      /><br />
-      Product Description:
-      <input
-        type="text"
-        name="productDescription"
-        value="<%=product.productDescription%>"
-      /><br />
-      Product Category:
-      <input
-        type="text"
-        name="productCategory"
-        value="<%=product.productCategory%>"
-      /><br />
-      img: <input type="hidden" name="img"  value="<%=product.img%>" /><br />
-      Customized:
-      <input
-        type="checkbox"
-        name="customized"
-      /><br />
-      Custom Message: <input type="text" placeholder="Enter customization instructions" name="customMessage" />
-
-<input type='hidden' name='customerId' value ="<%=userId%>">
-      <br></br>
-      <input type="submit" name="" value="Submit Order" />
-    </form> -->
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/js/jquery.poptrox.min.js"></script>
       <script src="assets/js/jquery.scrolly.min.js"></script>
