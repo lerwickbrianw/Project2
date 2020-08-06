@@ -9,49 +9,54 @@
   </head>
 
   <body>
-      <div class="page-wrap">
-        <!-- Nav -->
-        <nav id="nav">
-          <ul>
-            <li>
-              <a href="/" ><span class="icon fa-home" title="Home"></span></a>
-            </li>
-            <li>
-              <a href="/auth/login" class="active"><span class="icon fa-sign-in" title="Log In"></span></a>
-            </li>
-            <li>
-              <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
-            </li>
-            <li>
-              <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
-            </li>
-          </ul>
-        </nav>
-      
-        <!-- Main -->
-        <section id="main">
-          <!-- Banner -->
-          <section id="banner">
-            <div class="inner">
-              <h1>Welcome to Beaver Wood Carvers</h1>
-              <p>
-                Specializing in custom designed signs
-              </p>
-            </div>
-          </section>
-    
-    
-    
-    <h1>Login</h1>
+    <div class="page-wrap">
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="/"><span class="icon fa-home" title="Home"></span></a>
+          </li>
+          <li>
+            <a href="/auth/login" class="active"
+              ><span class="icon fa-sign-in" title="Log In"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/logout"
+              ><span class="icon fa-sign-out" title="Log Out"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/signup"
+              ><span class="icon fa-user-plus" title="Sign Up"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
 
-    <form action="/auth/login" method="POST">
-      Username: <input type="text" name="username" /> <br />
-      <br />
-      Password: <input type="password" name="password" /><br />
-      <br />
-      <input type="submit" value="Login" />
-    </form>
+      <!-- Main -->
+      <section id="main">
+        <!-- Banner -->
+        <section id="banner">
+          <div class="inner">
+            <h1>Welcome to Beaver Wood Carvers</h1>
+            <p>
+              Specializing in custom designed signs
+            </p>
+          </div>
+        </section>
 
+        <h1>Login</h1>
+
+        <form action="/auth/login" method="POST">
+          Username: <input type="text" name="username" /> <br />
+          <br />
+          Password: <input type="password" name="password" /><br />
+          <br />
+          <input type="submit" value="Login" />
+        </form>
+      </section>
+    </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>

@@ -1,76 +1,179 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Beaver Wood Carvers</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <base href="/" />
-    <link rel="stylesheet" href="assets/css/subpages.css" />
-</head>
+    <link rel="stylesheet" href="assets/css/products.css" />
+  </head>
 
-<body>
+  <body>
     <div class="page-wrap">
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="/" class="active"><span class="icon fa-home" title="Home"></span></a>
-                </li>
-                <li>
-                    <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
-                </li>
-                <li>
-                    <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
-                </li>
-                <li>
-                    <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
-                </li>
-            </ul>
-        </nav>
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="/" class="active"
+              ><span class="icon fa-home" title="Home"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/login"
+              ><span class="icon fa-sign-in" title="Log In"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/logout"
+              ><span class="icon fa-sign-out" title="Log Out"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/signup"
+              ><span class="icon fa-user-plus" title="Sign Up"></span
+            ></a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Main -->
-        <section id="main">
-            <!-- Banner -->
-            <section id="banner">
+      <!-- Main -->
+      <section id="main">
+        <!-- Banner -->
+        <section id="banner">
+          <div class="inner">
+            <h1>Welcome to Beaver Wood Carvers</h1>
+            <p>
+              Specializing in custom designed signs
+            </p>
+          </div>
+        </section>
+        <div id="main">
+          <div class="inner">
+            <!-- Boxes -->
+            <div class="thumbnails">
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic01.jpg" alt=""
+                /></a>
                 <div class="inner">
-                    <h1>Welcome to Beaver Wood Carvers</h1>
-                    <p>
-                        Specializing in custom designed signs
-                    </p>
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
                 </div>
-            </section>
+              </div>
 
-    <nav>
-        <%if (userId ===1) {%>
-      <a href="/products/new">Add a New Product</a>
-    <% } %>
-    </nav>
-    <ul>
-      <% products.forEach((product, index) => { %>
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic02.jpg" alt=""
+                /></a>
+                <div class="inner">
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button style2 fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
+                </div>
+              </div>
 
-      <li>
-        <a href="/products/<%=product.id%>"><%=product.productName%> </a>
-        <br> </br>
-            <%=product.productDescription%>
-        
-        <br> </br>
-        <%=product.productCategory%>
-      
-      <img src="<%=product.img%>" alt="" />
-    </li>
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic03.jpg" alt=""
+                /></a>
+                <div class="inner">
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button style3 fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
+                </div>
+              </div>
 
-<%if (userId ===1) {%>
-        <form action="/products/edit<%=product.id%>">
-            <input type="submit" value="Edit" />
-        </form>
-    <form action="/products/<%=product.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" />
-    </form>
-      <% } %>
-    <% }) %>
-    </ul>
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic04.jpg" alt=""
+                /></a>
+                <div class="inner">
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button style2 fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
+                </div>
+              </div>
 
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic05.jpg" alt=""
+                /></a>
+                <div class="inner">
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button style3 fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
+                </div>
+              </div>
 
+              <div class="box">
+                <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"
+                  ><img src="images/pic06.jpg" alt=""
+                /></a>
+                <div class="inner">
+                  <h3>Nascetur nunc varius commodo</h3>
+                  <p>
+                    Interdum amet accumsan placerat commodo ut amet aliquam
+                    blandit nunc tempor lobortis nunc non. Mi accumsan.
+                  </p>
+                  <a
+                    href="https://youtu.be/s6zR2T9vn2c"
+                    class="button fit"
+                    data-poptrox="youtube,800x400"
+                    >Watch</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

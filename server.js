@@ -47,6 +47,7 @@ app.use(
   verifyToken,
   require("./controllers/productsController.js")
 );
+
 app.use("/orders", verifyToken, require("./controllers/ordersController.js"));
 
 app.listen(process.env.PORT, () => {
