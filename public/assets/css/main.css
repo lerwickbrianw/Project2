@@ -601,6 +601,10 @@ button:disabled,
 
 #contact .column.social {
   background: #e6e6e6;
+  /* background-image: url("/images/BWC_Logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.35; */
 }
 
 @media screen and (max-width: 980px) {
