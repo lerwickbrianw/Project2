@@ -69,7 +69,10 @@
                         <input type='hidden' name='customerId' value="<%=userId%>">
                         <input type="hidden" name="productId" value="<%=product.id%>" />
                         </br>
+                        <%if (userId != undefined) {%>
+
                   <input type="submit" name="" value="Submit Order" />
+                        <% }%>
                 </form>
                 </div>
               </div>

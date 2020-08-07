@@ -72,7 +72,9 @@
                 </p>
 
                 <form method="get" action="/orders/new/<%=product.id;%>">
+                  <%if (userId != undefined) {%>
                   <input type="submit" value="Order" />
+                  <%}%>
                 </form>
                 <form action="/products/">
                   <input type="submit" value="Return to Products Page" />
