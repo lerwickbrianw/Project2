@@ -6,7 +6,7 @@ Basic E-commerce foundation for Beaver Woodcarvers to showcase past projects and
 
 ## Project Links
 
-- [github repo]()
+- [github repo](https://github.com/lerwickbrianw/Project2)
 - [Deploymnet](https://beaver-wood-carvers.herokuapp.com/)
 
 ## Wireframes
@@ -154,11 +154,12 @@ Controllers
 
 ### Credits
 
-- Styling templates from Templated.co. I used Snapshot for the homepage and main theme but integrated Full Motion for the products display pages.
-- Images hosted on www.cloundairy.com
+- Styling templates from Templated.co. I used https://templated.co/snapshot for the homepage and main theme but integrated https://templated.co/fullmotion for the products display pages.
+- Images hosted on https://cloudinary.com
 
 #### Remaining Work
 
 - Continue to fine tune styling such as reformating images to all be the same aspect ratio
 - Expand backend structure to allow multiple products per order
 - Create store owner portal to manage orders and update status information including shipping details.
+- Introduce categories to provide better sorting of like products.
