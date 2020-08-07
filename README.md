@@ -50,7 +50,7 @@ Customer signup page - As a new Beaver Wood Carvers customer, I would like to en
 - Task - Update profile.ejs to show all customer orders. - Complete
 - Task - Remove Delete customer button. - Complete
 - Task - catch error for duplicate username. - catch complete but not able to add error message to signup page.
-- Task - refactor profile.ejs to include a query to get all order data to display
+- Task - refactor profile.ejs to include a query to get all order data to display - complete
 
 ### 3. User Story Three
 
@@ -90,25 +90,27 @@ Add to order button – As a Beaver Wood Carvers store owner, I want to provide 
 
 ### 7. User Story Seven
 
-Edit order page - As a Beaver Wood Carvers customer, I would like to be able to update or delete items on my order so that I can change my mind or make corrections before finalizing the order.
+Edit order page - As a Beaver Wood Carvers customer, I would like to be able to delete my order if I change my mind.
 
-- Task - create order/edit.ejs
+- Task - add delete button to orders/show.ejs - complete
 
 ### 8. User Story Eight
 
 Submit order - As a Beaver Wood Carvers customer, I would like to be able to submit my order once I have reviewed for accuracy.
 
+- Task - add Submit Order button to orders/new.ejs - complete
+
 ### 9. User Story Nine
 
 Show order history page - As a Beaver Wood Carvers customer, I would like to see all orders that I have placed in the past so that I can easily view my order history.
 
-- Task - display all customer orders on customer profile page with link to open each individual order.
+- Task - display all customer orders on customer profile page with link to open each individual order. - Complete
 
 ### 10. User Story Ten
 
 Review specific order - As a Beaver Wood Carvers customer, I would like to be able to select and display a specific order so that I can review the order details and compare what I received against what I ordered.
 
-- Task - create orders/show.ejs
+- Task - create orders/show.ejs - complete
 
 ### 11. User Story Elevin
 

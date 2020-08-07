@@ -10,20 +10,7 @@ router.get("/", (req, res) => {
   });
 });
 
-// get route for single order
-// router.get("/:id/", function (req, res) {
-//   Order.findByPk(req.params.id).then((order) => {
-//     Product.findOne({
-//       where: { id: req.params.productId },
-//     }).then((product) => {
-//       res.render("orders/show.ejs", {
-//         order: order,
-//         product: product,
-//       });
-//     });
-//   });
-// });
-
+//get single order by id
 router.get("/:id", (req, res) => {
   Order.findByPk(req.params.id, {
     include: [
@@ -56,14 +43,6 @@ router.get("/new/:id/", function (req, res) {
 //Post route - takes data from the form and creates new order
 router.post("/", (req, res) => {
   Order.create(req.body).then((newOrder) => {
-    // if (req.body.customMessage === null) {
-    //   req.body.customized = false;
-    //   console.log("customMessage", req.body.customMessage);
-    //   console.log("customized", req.body.customized);
-    // } else {
-    //   console.log("customMessage", req.body.customMessage);
-    //   console.log("customized", req.body.customized);
-    // }
     res.redirect(`orders/${newOrder.id}`);
   });
 });

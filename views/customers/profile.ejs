@@ -73,12 +73,12 @@
       Email:
       <input type="text" name="email" value="<%=customer.email%>" />
     </form>
-        <h2>My Orders</h2>
-    <% if(customer.Products){%> <% for (let i = 0; i < customer.Products.length;
-    i++){ %>
+    <h2>My Orders</h2>
+    <% if(customer.Products){%> 
+    <% for (let i = 0; i < customer.Products.length; i++){ %>
     <li>
       <a href="/orders/<%=customer.Products[i].id%>">
-        <%=customer.Products[i].productName%></a
+        <%=customer.Products[i].productName%></a>
 
       <br />
       <%=customer.Products[i].productDescription%>
@@ -86,8 +86,6 @@
     <br />
     <% } %> <% } else {%>
     <h3>No orders placed yet</h3>
-
-  
     <% } %>
 
     
