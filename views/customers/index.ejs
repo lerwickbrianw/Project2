@@ -22,14 +22,10 @@
               ><span class="icon fa-home" title="Home"></span
             ></a>
           </li>
+          <% if (userId == undefined) { %>
           <li>
             <a href="/auth/login"
               ><span class="icon fa-sign-in" title="Log In"></span
-            ></a>
-          </li>
-          <li>
-            <a href="/auth/logout"
-              ><span class="icon fa-sign-out" title="Log Out"></span
             ></a>
           </li>
           <li>
@@ -37,11 +33,19 @@
               ><span class="icon fa-user-plus" title="Sign Up"></span
             ></a>
           </li>
-          <!-- <li>
-            <a href="/customers/profile"
+          <% } else {%>
+          <li>
+            <a href="/auth/logout"
+              ><span class="icon fa-sign-out" title="Log Out"></span
+            ></a>
+          </li>
+
+          <li>
+            <a href="/customers/profile/<%=userId%>"
               ><span class="icon fa-user" title="My Account"></span
             ></a>
-          </li> -->
+          </li>
+          <%}%>
         </ul>
       </nav>
 
@@ -71,9 +75,10 @@
             </header>
             <div class="content">
               <div class="media">
-                <a href="<%=products[5].img%>"
+                <a
+                  href="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596645989/116337907_1423919304458718_4474270081376626880_n_uzucjp.jpg"
                   ><img
-                    src="<%=products[5].img%>"
+                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596760050/thumbnail_cuttingboard_larvdl.jpg"
                     alt=""
                     title="Walnut Cuttingboard with exotic wood inlays"
                 /></a>
@@ -82,7 +87,7 @@
                 <a
                   href="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596645990/115984238_1423921667791815_9085128093895382435_n_ggagk0.jpg"
                   ><img
-                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596645990/115984238_1423921667791815_9085128093895382435_n_ggagk0.jpg"
+                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596759967/thumbnail_Monogram_Lerwick_kcnpo8.jpg"
                     alt=""
                     title="Curly Maple Monogram sign with Walnut inlay."
                 /></a>
@@ -91,18 +96,18 @@
                 <a
                   href="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596648683/61833202_1066950543488931_3348754716149415936_o_wzs3ir.jpg"
                   ><img
-                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596648683/61833202_1066950543488931_3348754716149415936_o_wzs3ir.jpg"
+                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596759745/thumbnail-John_Deere_Edgelit_sign_kccs4x.jpg"
                     alt=""
                     title="LED Edgelit sign with Oak base"
                 /></a>
               </div>
               <div class="media">
                 <a
-                  href="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596645990/61867520_1066956930154959_8050948082189205504_o_rzfxct.jpg"
+                  href="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596760629/116054037_1423922641125051_5028933897574745306_n_ywegf9.jpg"
                   ><img
-                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596645990/61867520_1066956930154959_8050948082189205504_o_rzfxct.jpg"
+                    src="https://res.cloudinary.com/dgvmjgamo/image/upload/v1596760208/thumbnail_Wisconsin_clock_lloerb.jpg"
                     alt=""
-                    title="Anniversary Shadowbox"
+                    title="Wisconsin Clock - Elm with Mahogany Inlay"
                 /></a>
               </div>
               <!-- <div class="media">

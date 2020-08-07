@@ -34,6 +34,17 @@ router.get("/:id", (req, res) => {
   Product.findByPk(req.params.id).then((product) => {
     res.render("products/show.ejs", {
       product: product,
+      userId: req.customer.id,
+    });
+  });
+});
+
+// get route for editing product
+router.get("/edit/:id/", function (req, res) {
+  Product.findByPk(req.params.id).then((product) => {
+    res.render("products/edit.ejs", {
+      product: product,
+      userId: req.customer.id,
     });
   });
 });
@@ -44,23 +55,14 @@ router.put("/:id", (req, res) => {
     where: { id: req.params.id },
     returning: true,
   }).then((product) => {
-    res.redirect("/products");
-  });
-});
-
-// get route for editing product
-router.get("/edit/:id/", function (req, res) {
-  Product.findByPk(req.params.id).then((product) => {
-    res.render("products/edit.ejs", {
-      product: product,
-    });
+    res.redirect("/products/");
   });
 });
 
 //delete a product
 router.delete("/:id", (req, res) => {
   Product.destroy({ where: { id: req.params.id } }).then(() => {
-    res.redirect("/product");
+    res.redirect("/products");
   });
 });
 module.exports = router;

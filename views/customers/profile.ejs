@@ -14,23 +14,29 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li>
-          <a href="/" class="active"><span class="icon fa-home" title="Home"></span></a>
-        </li>
-        <li>
-          <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
-        </li>
-        <li>
-          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
-        </li>
-        <li>
-          <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
-        </li>
-                  <li>
-                    <%if (userId !==1) {%> <%} else { %>
-                    <a href="/products/new"><span class="icon fa-plus-square" title="Add New Product"></span></a>
-                    <% } %>
-                  </li>
+        <li>            
+        <a href="/" ><span class="icon fa-home" title="Home"></span></a>
+            </li>
+            <% if (userId == undefined) { %>
+            <li>
+                <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
+            </li>
+            <li>
+              <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
+            </li>
+            <% } else {%>
+            <li>
+                <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
+            </li>
+             <li>
+                <a href="/customers/profile/<%=userId%>"class="active"><span class="icon fa-user" title="My Account"></span></a>
+            </li>
+              <%}%>
+            <li>
+              <%if (userId !==1) {%> <%} else { %>
+                <a href="/products/new"><span class="icon fa-plus-square" title="Add New Product"></span></a>
+              <% } %>
+              </li>
       </ul>
     </nav>
 

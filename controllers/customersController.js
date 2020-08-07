@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
   Products.findAll().then((products) => {
     res.render("customers/index.ejs", {
       products: products,
+      userId: req.customer.id,
     });
   });
 });

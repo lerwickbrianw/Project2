@@ -37,6 +37,7 @@ router.get("/:id", (req, res) => {
       res.render("orders/show.ejs", {
         order: order,
         product: product,
+        userId: req.customer.id,
       });
     });
   });

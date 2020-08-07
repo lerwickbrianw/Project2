@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Beaver Wood Carvers</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/" />
+    <link rel="stylesheet" href="assets/css/products.css" />
+  </head>
 
-<head>
-  <title>Beaver Wood Carvers</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/" />
-  <link rel="stylesheet" href="assets/css/products.css" />
-</head>
+  <body>
+    <div class="page-wrap">
+      <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          <li>
+            <a href="/"><span class="icon fa-home" title="Home"></span></a>
+          </li>
+          <% if (userId == undefined) { %>
+          <li>
+            <a href="/auth/login"
+              ><span class="icon fa-sign-in" title="Log In"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/auth/signup"
+              ><span class="icon fa-user-plus" title="Sign Up"></span
+            ></a>
+          </li>
+          <% } else {%>
+          <li>
+            <a href="/auth/logout"
+              ><span class="icon fa-sign-out" title="Log Out"></span
+            ></a>
+          </li>
+          <li>
+            <a href="/customers/profile/<%=userId%>"
+              ><span class="icon fa-user" title="My Account"></span
+            ></a>
+          </li>
+          <%}%>
+          <li>
+            <%if (userId !==1) {%> <%} else { %>
+            <a href="/products/new"
+              ><span class="icon fa-plus-square" title="Add New Product"></span
+            ></a>
+            <% } %>
+          </li>
+        </ul>
+      </nav>
 
-<body>
-  <div class="page-wrap">
-    <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <li>
-          <a href="/" ><span class="icon fa-home" title="Home"></span></a>
-        </li>
-        <li>
-          <a href="/auth/login"><span class="icon fa-sign-in" title="Log In"></span></a>
-        </li>
-        <li>
-          <a href="/auth/logout"><span class="icon fa-sign-out" title="Log Out"></span></a>
-        </li>
-        <li>
-          <a href="/auth/signup"><span class="icon fa-user-plus" title="Sign Up"></span></a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Main -->
-    <section id="main">
-      <!-- Banner -->
-      <section id="banner">
-        <div class="inner">
-          <h1>Beaver Wood Carvers Products</h1>
-          <p>
-            Select a product you like and customize to fit your needs!
-          </p>
-        </div>
-      </section>
-      <div id="main">
-        <div class="inner">
-          <!-- Boxes -->
+      <!-- Main -->
+      <section id="main">
+        <!-- Banner -->
+        <section id="banner">
+          <div class="inner">
+            <h1>Beaver Wood Carvers Products</h1>
+            <p>
+              Select a product you like and customize to fit your needs!
+            </p>
+          </div>
+        </section>
+        <div id="main">
+          <div class="inner">
+            <!-- Boxes -->
             <div class="box">
               <a class="image fit"><img src="<%=product.img%>" alt="" /></a>
               <div class="inner">
@@ -53,22 +73,21 @@
 
                 <form method="get" action="/orders/new/<%=product.id;%>">
                   <input type="submit" value="Order" />
-                  </br>
-                  <a href="/products">Back to Products</a>
+                </form>
+                <form action="/products/">
+                  <input type="submit" value="Return to Products Page" />
                 </form>
               </div>
             </div>
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.poptrox.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/skel.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
+      </section>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
-
